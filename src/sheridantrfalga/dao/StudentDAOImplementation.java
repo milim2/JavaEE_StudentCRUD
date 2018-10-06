@@ -30,7 +30,7 @@ public class StudentDAOImplementation implements StudentDAO {
 			ResultSet rs = stmt.executeQuery(
 			("select ID, Firstname, Lastname, Program,CAST(gpa as DECIMAL(3, 2)) As gpa from student"));
 			
-			while(rs.next() {
+			while(rs.next()) {
 				Student stu = new Student();
 				stu.setStudentid (rs.getInt("ID"));
 				stu.setFirstname (rs.getString("Firstname"));

@@ -48,12 +48,13 @@ public class DBUtil {
 		}	
 		
 		return conn;
+		
 	}
 
 	
-	public static void closeConnection (Connection, toBeClosed) {
+	public static void closeConnection (Connection toBeClosed) {
 		
-		if(toBeClose == null)
+		if(toBeClosed == null)
 			return;
 		
 		try {

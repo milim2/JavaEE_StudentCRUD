@@ -13,9 +13,20 @@ public interface StudentDAO {
 	
 	
 	// Default webapp operation
+//	public List<Student> getAllStudents();
+	
+	public void addStudent(Student student);
+	public void deleteStudent(int studentId);
+	public void updateStudent(Student student);
+	
 	public List<Student> getAllStudents();
+	public Student getStudentById(int studentId);
 	
 	
+	
+	//Search or Filter (by Program)- 2filters should be proven
+	public List<Student> getStudentByProgram(String program);
+	public List<Student> getStudentByGPA(double gpa);
 	
 	
 	
