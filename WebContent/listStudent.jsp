@@ -37,10 +37,11 @@
 			</c:forEach>			
 		</tbody>		
 	</table>
-
+	<p>
 	<a href="StudentController?action=insert">Add Student</a>
-	
-	
+	<a href="searchStudentsInProgram.jsp">Search Students from Program</a>
+	<a href="searchStudentsWithGPA.jsp">Search Students with GPA</a>
+	</p>
 
 
 </body>
