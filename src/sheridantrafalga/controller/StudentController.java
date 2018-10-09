@@ -2,6 +2,7 @@ package sheridantrafalga.controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,8 +30,8 @@ public class StudentController extends HttpServlet {
 	}
 	
 	@Override
-	protected <RequestDispatcher> void doGet(HttpServletRequest req, HttpServletResponse resp) 
-			  {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+			throws IOException {
 			
 		String action = req.getParameter("action");
 		String forward = "";		
@@ -71,7 +72,7 @@ public class StudentController extends HttpServlet {
 			
 		
 		RequestDispatcher view = req.getRequestDispatcher(forward);		
-		view.forward(req. resp);
+		view.forward(req, resp);
 	}
 		
 		@Override
@@ -113,7 +114,7 @@ public class StudentController extends HttpServlet {
 		
 			RequestDispatcher view = req.getRequestDispatcher(LIST_STUDENT);
 			req.setAttribute("students", dao.getAllStudents());
-			view.forward(req,  resp);
+			view.forward(req, resp);
 		
 		
 	}
