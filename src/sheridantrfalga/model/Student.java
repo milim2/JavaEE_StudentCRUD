@@ -62,9 +62,4 @@ public class Student {
 				", program=" + program + 
 				", gpa=" + gpa + "]";
 	}
-	
-	
-	
-	
-	
 }
