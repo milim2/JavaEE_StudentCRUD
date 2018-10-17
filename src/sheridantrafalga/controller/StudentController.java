@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +22,7 @@ public class StudentController extends HttpServlet {
 	// Tomcat 6 (older Tomcat Implementation was looking for this)
 	private static final long serialversionUID = 7878L;
 	
-	public static final String LIST_STUDENT = "/liststudent.jsp"; // for only display
+	public static final String LIST_STUDENT = "/listStudent.jsp"; // for only display
 	public static final String INSERT_OR_EDIT = "/student.jsp";
 	public static final String LIST_STUDENTS_FROM_PROGRAM = "/listStudentsInProgram.jsp";
 	public static final String LIST_STUDENTS_WITH_GPA = "/listStudentsWithGPA.jsp";
@@ -109,7 +110,7 @@ public class StudentController extends HttpServlet {
 		String studentId = req.getParameter("studentId");
 
 		if (studentId == null || studentId.isEmpty())
-			dao.updateStudent(student);
+			dao.addStudent(student);
 		else {
 			student.setStudentid(Integer.parseInt(studentId));
 			dao.updateStudent(student);

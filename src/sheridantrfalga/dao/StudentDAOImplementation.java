@@ -96,10 +96,10 @@ public class StudentDAOImplementation implements StudentDAO {
 			while(rs.next()) {
 				Student stu = new Student();
 				stu.setStudentid (rs.getInt("ID"));
-				stu.setFirstname (rs.getString("Firstname"));
-				stu.setLastname (rs.getString("Lastname"));
+				stu.setFirstname (rs.getString("FirstName"));
+				stu.setLastname (rs.getString("LastName"));
 				stu.setProgram (rs.getString("Program"));
-				stu.setGpa (rs.getInt("GPA"));
+				stu.setGpa (rs.getDouble("GPA"));
 				
 				students.add(stu);
 			}
@@ -128,7 +128,7 @@ public class StudentDAOImplementation implements StudentDAO {
 			while(rs.next()) {
 				stu.setStudentid(rs.getInt("ID"));
 				stu.setFirstname(rs.getString("FirstName"));
-				stu.setLastname(rs.getString("LAstName"));
+				stu.setLastname(rs.getString("LastName"));
 				stu.setGpa(rs.getDouble("GPA"));
 				
 			}
@@ -160,8 +160,8 @@ public class StudentDAOImplementation implements StudentDAO {
 			while(rs.next()) {
 				Student stu = new Student();
 				stu.setStudentid (rs.getInt("ID"));
-				stu.setFirstname (rs.getString("Firstname"));
-				stu.setLastname (rs.getString("Lastname"));
+				stu.setFirstname (rs.getString("FirstName"));
+				stu.setLastname (rs.getString("LastName"));
 				stu.setProgram (rs.getString("Program"));
 				stu.setGpa (rs.getInt("GPA"));
 				
@@ -199,8 +199,8 @@ public class StudentDAOImplementation implements StudentDAO {
 			while(rs.next()) {
 				Student stu = new Student();
 				stu.setStudentid (rs.getInt("ID"));
-				stu.setFirstname (rs.getString("Firstname"));
-				stu.setLastname (rs.getString("Lastname"));
+				stu.setFirstname (rs.getString("FirstName"));
+				stu.setLastname (rs.getString("LastName"));
 				stu.setProgram (rs.getString("Program"));
 				stu.setGpa (rs.getInt("GPA"));
 				

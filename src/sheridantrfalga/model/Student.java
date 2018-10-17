@@ -56,10 +56,10 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [studentid=" + studentid + 
-				", firstname=" + firstname + 
-				", lastname=" + lastname + 
-				", program=" + program + 
-				", gpa=" + gpa + "]";
+		return "Student [Studentid=" + this.studentid + 
+				", Firstname=" + this.firstname + 
+				", Lastname=" + this.lastname + 
+				", program=" + this.program + 
+				", gpa=" + this.gpa + "]";
 	}
 }
