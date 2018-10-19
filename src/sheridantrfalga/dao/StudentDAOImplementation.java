@@ -37,12 +37,12 @@ public class StudentDAOImplementation implements StudentDAO {
 	}
 	
 	
-	public void deleteStudent(int StudentID) {
+	public void deleteStudent(int StudentId) {
 		try {
 			
 			String query = "delete from student where ID=?";
 			PreparedStatement ps = conn.prepareStatement(query);
-			ps.setInt(1, StudentID);
+			ps.setInt(1, StudentId);
 			ps.executeUpdate();
 			ps.close();
 			
@@ -154,9 +154,8 @@ public class StudentDAOImplementation implements StudentDAO {
 			PreparedStatement ps = conn.prepareStatement(query);
 			
 			ps.setString(1, program);
-			ResultSet rs = ps.executeQuery(
-			("select ID, Firstname, Lastname, Program,CAST(gpa as DECIMAL(3, 2)) As gpa from student"));
-			
+			ResultSet rs = ps.executeQuery();
+						
 			while(rs.next()) {
 				Student stu = new Student();
 				stu.setStudentid (rs.getInt("ID"));

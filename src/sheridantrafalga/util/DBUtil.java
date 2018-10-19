@@ -10,7 +10,7 @@ import java.util.Properties;
 public class DBUtil {
 
 	private static Connection conn;
-	private static DBUtil dbInstance = null;
+//	private static DBUtil dbInstance = null;
 	
 	public static Connection getConnection() {
 		if (conn != null)
@@ -44,13 +44,13 @@ public class DBUtil {
 	
 	
 		
-		public static synchronized DBUtil getInstance() {
-			if (dbInstance == null) {
-				dbInstance = new DBUtil();
-			}
-			return dbInstance;
-
-		}
+//		public static synchronized DBUtil getInstance() {
+//			if (dbInstance == null) {
+//				dbInstance = new DBUtil();
+//			}
+//			return dbInstance;
+//
+//		}
 
 		public static void closeConnection(Connection tobeClosed) {
 			if (tobeClosed == null) {

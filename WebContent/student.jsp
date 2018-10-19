@@ -17,11 +17,11 @@ name="studentId" value="<c:out value="${student.studentid}" />" readonly="readon
 </div>
 <div>
 <label for="firstName">First Name</label> <input type="text"
-name="firstName" value="<c:out value="${student.firstname}" />" />
+name="firstname" value="<c:out value="${student.firstname}" />" style="width: 287px; "/>
 </div>
 <div>
 <label for="lastName">Last Name</label> <input type="text"
-name="lastName" value="<c:out value="${student.lastname}" />" />
+name="lastname" value="<c:out value="${student.lastname}" />" />
 </div>
 <div>
 <label for="program">Program</label> <input type="text" name="program" value="<c:out value="${student.program}" />" />

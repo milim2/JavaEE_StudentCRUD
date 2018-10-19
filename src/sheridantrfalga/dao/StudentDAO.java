@@ -28,8 +28,6 @@ public interface StudentDAO {
 	public List<Student> getStudentByProgram(String program);
 	public List<Student> getStudentByGPA(double gpa);
 	
-	
-	
 
 }
 

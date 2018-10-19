@@ -16,6 +16,9 @@ import sheridantrfalga.model.Student;
 public class StudentController extends HttpServlet {
 
 	private StudentDAO dao;
+	
+//	private String studentstr; (ID as a String)
+
 	private String gpastr; // (GPA as a String)
 	private double gpadbl; // (GPA as a double primitive)
 
@@ -39,10 +42,14 @@ public class StudentController extends HttpServlet {
 		String forward = "";
 
 		if (action.equalsIgnoreCase("delete")) {
+		
 			forward = LIST_STUDENT;
 			int studentId = Integer.parseInt(req.getParameter("studentId"));
 
 			dao.deleteStudent(studentId);
+			
+			req.setAttribute("students", dao.getAllStudents());
+			
 			
 		} else if (action.equalsIgnoreCase("edit")) {
 			forward = INSERT_OR_EDIT;
@@ -50,8 +57,11 @@ public class StudentController extends HttpServlet {
 
 			Student student = dao.getStudentById(studentId);
 			req.setAttribute("student", student);
+			
 		} else if (action.equalsIgnoreCase("insert")) {
+			
 			forward = INSERT_OR_EDIT;
+			
 		} else if (action.equalsIgnoreCase("searchstudentsfromprogram")) {
 
 			// LIST ALL RECORDS or Students that are part of a particular program
@@ -85,9 +95,7 @@ public class StudentController extends HttpServlet {
 
 		Student student = new Student();
 
-		// takes an Integer primitive
-		// student.setStudentid(req.getParameter("studentId"));
-
+				
 		student.setFirstname(req.getParameter("firstname"));
 		student.setLastname(req.getParameter("lastname"));
 		student.setProgram(req.getParameter("program"));
