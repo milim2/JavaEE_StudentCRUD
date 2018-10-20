@@ -129,6 +129,7 @@ public class StudentDAOImplementation implements StudentDAO {
 				stu.setStudentid(rs.getInt("ID"));
 				stu.setFirstname(rs.getString("FirstName"));
 				stu.setLastname(rs.getString("LastName"));
+				stu.setProgram(rs.getString("Program"));
 				stu.setGpa(rs.getDouble("GPA"));
 				
 			}
@@ -143,7 +144,6 @@ public class StudentDAOImplementation implements StudentDAO {
 	}
 	
 	
-	@Override
 	public List<Student> getStudentByProgram(String program) {
 		
 		List<Student> students = new ArrayList<Student>();

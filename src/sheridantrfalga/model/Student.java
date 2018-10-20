@@ -37,15 +37,11 @@ public class Student {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	
+		
 	public String getProgram() {
 		return program;
 	}
-	
-	public void setProgram(String program) {
-		this.program = program;
-	}
-	
+
 	public double getGpa() {
 		return gpa;
 	}
@@ -56,10 +52,15 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [Studentid=" + this.studentid + 
-				", Firstname=" + this.firstname + 
-				", Lastname=" + this.lastname + 
-				", program=" + this.program + 
-				", gpa=" + this.gpa + "]";
+		return "Student [studentid=" + studentid + ", firstname=" + firstname + ", lastname=" + lastname + ", program="
+				+ program + ", gpa=" + gpa + "]";
 	}
+
+	public void setProgram(String program) {
+		this.program = program;
+		
+	}
+
+	
+
 }

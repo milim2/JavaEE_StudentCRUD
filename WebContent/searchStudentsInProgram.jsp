@@ -7,6 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Search for Students within a given Program</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <form action="StudentController" method="get">

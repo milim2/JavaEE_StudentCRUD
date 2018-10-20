@@ -74,7 +74,9 @@ public class StudentController extends HttpServlet {
 
 			// LIST ALL RECORDS or Students that are part of a particular program
 			forward = LIST_STUDENTS_WITH_GPA;
+			
 			String gpaRequest = req.getParameter("gpa");
+			
 			double gpadblRequest = Double.parseDouble(gpaRequest);
 			req.setAttribute("students", dao.getStudentByGPA(gpadblRequest));
 			
@@ -94,8 +96,7 @@ public class StudentController extends HttpServlet {
 			throws IOException, ServletException {
 
 		Student student = new Student();
-
-				
+		
 		student.setFirstname(req.getParameter("firstname"));
 		student.setLastname(req.getParameter("lastname"));
 		student.setProgram(req.getParameter("program"));
@@ -107,7 +108,9 @@ public class StudentController extends HttpServlet {
 
 		try {
 			gpadbl = Double.parseDouble(gpastr);
+			
 		} catch (NumberFormatException e) {
+			
 			throw new RuntimeException(gpadbl + " is not a number");
 		}
 
